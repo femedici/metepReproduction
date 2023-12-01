@@ -6,8 +6,8 @@ Reprodução de um código relacionado ao artigo de pesquisa "Precificação de 
 
 A aplicação está estrutura em python utilizando a biblioteca "matplotlib" para criar graficos dos dados analisados.
 
-Faz a geração de valores aleatórios de quantidades de issues para uma aplicação, e depois faz o calculo estipulado para cada issue levando em consideração o nivel dela.
-
+Faz a geração de valores aleatórios e depois aplica diferentes funções de preficiação afim de achar um equilibrio entre tempo e preço, no objetivo de precificar uma
+demanda/issue de maneira mais simplificada.
 
 ## Integrantes
 

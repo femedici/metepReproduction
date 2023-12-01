@@ -21,15 +21,20 @@ def cost_plus(costs, stock=0):
 def price(x, a=200, b=10, d=10, t=np.linspace(1, 10, 10)):
     return (a - b * x) * d / (d + t)
 
+# Gera valores aleatórios de preços para serem tratados depois pelas funções de precificação
 def price_values(p, num_prices=10):
     p_vals = []
     for x in range(1, num_prices + 1):
-        # Modifique a lógica para gerar 10 preços diferentes
         p = p - (0.033 * p * x)
-        p[p < 0] = 0  # Corrige o problema de comparação com array
+        p[p < 0] = 0  
         p_vals.append(p.copy())
-
+        
     return p_vals
+
+# Diferentes tipos de funções para otimização de preço em relação ao tempo
+
+    # Estibulação das variaveis de decisão (x_t) são no caso um otimizador das funções para maximiar ou minimizar aquela função
+    # ou seja, faz o papel determinar o grau de dificuldade daquela issue para jogar o preço mais acima ou mais abaixo caso o grau seja menor
 
 def demand(p, a=200, b=10, d=10, t=np.linspace(1, 10, 10)):
     return 1.0 / b * (a - p * (d + t) / d)
@@ -90,5 +95,6 @@ def dynamic_pricing(time=0, stock=0):
     plt.tight_layout()
     plt.show()
 
-# Exemplo de chamada da função dynamic_pricing
+# Chamada da função dynamic_pricing 
+# onde vai ser feito todo o tratamento das operações e precificações
 dynamic_pricing(time=0, stock=20)
